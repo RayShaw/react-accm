@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import '../css/login.css';
+import { connect } from 'react-redux'
 import { browserHistory } from 'react-router';
 import LoginForm from '../components/login/LoginForm';
 import { bindActionCreators } from 'redux';
 import { assign } from 'lodash';
+import * as LoginActions from '../actions/login';
+import '../css/login.css';
 
 class Login extends Component {
 
   componentWillReceiveProps(nextProps) {
-
-    if (true) {
+    const { success, data } = nextProps;
+    console.log(success);
+    console.log(data);
+    
+    if (success) {
       browserHistory.push('/system');
     }
   }
@@ -34,8 +39,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(assign({}), dispatch)
+    actions: bindActionCreators(assign({}, LoginActions), dispatch)
   }
 }
 
-export default Login;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login)

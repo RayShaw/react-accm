@@ -11,8 +11,8 @@ export default class LoginForm extends Component {
       userName: userName,
       password: password
     }
-    // this.props.loginSubmit(formData);
     console.log(formData);
+    this.props.loginSubmit(formData);
   }
 
   render() {
@@ -22,7 +22,6 @@ export default class LoginForm extends Component {
         <input type="text" ref="inputLoginName" id="inputLoginName" className="form-control" placeholder="Login Name" required autoFocus />
         <label htmlFor="inputPassword" className="sr-only">Password:</label>
         <input type="password" ref="inputPassword" id="inputPassword" className="form-control" placeholder="Password" required />
-        {/* <a href="system" className="btn btn-lg btn-primary btn-block">Login</a> */}
         <button type="submit" className="btn btn-lg btn-primary btn-block">Login</button>
       </form>
     );
