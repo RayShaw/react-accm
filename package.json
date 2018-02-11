@@ -2,6 +2,7 @@
   "name": "react-accm",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://www.weather.com.cn/",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "lodash": "^4.17.5",

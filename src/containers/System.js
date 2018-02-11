@@ -1,6 +1,34 @@
 import React, { Component } from 'react';
 
+const cityCode = 101010100;
+
 class System extends Component {
+  constructor() {
+    super(...arguments);
+    this.state = { data: null };
+  }
+
+  componentDidMount() {
+    const apiUrl = `/data/cityinfo/${cityCode}.html`;
+    fetch(apiUrl).then((response) => {
+      if (response.status !== 200) {
+        throw new Error('Fail to get response with status ' + response.status);
+      }
+      console.log('hello');
+
+      response.json().then((responseJson) => {
+        console.log(responseJson.weatherinfo);
+        this.setState({ weather: responseJson.weatherinfo });
+      }).catch((error) => {
+        console.log(error);
+        this.setState({ weather: null });
+      });
+    }).catch((error) => {
+      console.log(error);
+      this.setState({ weather: null });
+    });
+  }
+
   render() {
     return (
       <div>
@@ -46,7 +74,7 @@ class System extends Component {
                   </div>
                 </div>
               </form>
-              <br/>
+              <br />
               <div className="table-responsive">
                 <table className="table table-striped">
                   <thead>
@@ -65,8 +93,8 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
-                        <button type="button" className="btn btn-danger btn-xs" onClick={function(){window.confirm(11)}}>Delete</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
+                        <button type="button" className="btn btn-danger btn-xs" onClick={function () { window.confirm(11) }}>Delete</button>
                       </td>
                     </tr>
                     <tr>
@@ -75,7 +103,7 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
                         <button type="button" className="btn btn-danger btn-xs">Delete</button>
                       </td>
                     </tr>
@@ -85,7 +113,7 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
                         <button type="button" className="btn btn-danger btn-xs">Delete</button>
                       </td>
                     </tr>
@@ -95,7 +123,7 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
                         <button type="button" className="btn btn-danger btn-xs">Delete</button>
                       </td>
                     </tr>
@@ -105,7 +133,7 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
                         <button type="button" className="btn btn-danger btn-xs">Delete</button>
                       </td>
                     </tr>
@@ -115,7 +143,7 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
                         <button type="button" className="btn btn-danger btn-xs">Delete</button>
                       </td>
                     </tr>
@@ -125,7 +153,7 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
                         <button type="button" className="btn btn-danger btn-xs">Delete</button>
                       </td>
                     </tr>
@@ -135,7 +163,7 @@ class System extends Component {
                       <td>2017-12-12</td>
                       <td>SuperAdmin</td>
                       <td>
-                        <button type="button" className="btn btn-success btn-xs" style={{width:46.69}}>Edit</button>
+                        <button type="button" className="btn btn-success btn-xs" style={{ width: 46.69 }}>Edit</button>
                         <button type="button" className="btn btn-danger btn-xs">Delete</button>
                       </td>
                     </tr>
