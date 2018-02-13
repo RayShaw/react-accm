@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account Management System</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/accm.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Account Management System</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">UserMenu</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+          <li><a href="system.html">System</a></li>
+          <li><a href="session.html">Session</a></li>
+          <li><a href="logintype.html">LoginType</a></li>
+          <li><a href="userrole.html">UserRole</a></li>
+          <li class="active"><a href="#">Account <span class="sr-only">(current)</span></a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">        
+        <div class="row">
+          <div class="col-md-10">
+            <h2 class="sub-header">Account</h2>
+          </div>
+          <div class="col-md-2" style="margin-top:30px">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>LoginType</th>
+                <th>UserName</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Mobile No</th>
+                <th>Password Question</th>
+                <th>Password Answer</th>
+                <th>Locked</th>
+                <th>Last Login Time</th>
+                <th>Operatiton</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CTM</td>
+                <td>johnny</td>
+                <td>********</td>
+                <td>johnny@123.com</td>
+                <td>98765432</td>
+                <td>What is your company Name ?</td>
+                <td>FWD</td>
+                <td>N</td>
+                <td>2017-12-12 12:36:12</td>
+                <td>
+                  <button type="button" class="btn btn-success btn-xs btn-block">Edit</button>
+                  <button type="button" class="btn btn-info btn-xs btn-block">Lock</button>
+                </td>
+              </tr>
+              <tr>
+                <td>CTM</td>
+                <td>johnny</td>
+                <td>********</td>
+                <td>johnny@123.com</td>
+                <td>98765432</td>
+                <td>What is your company Name ?</td>
+                <td>FWD</td>
+                <td>N</td>
+                <td>2017-12-12 12:36:12</td>
+                <td>
+                  <button type="button" class="btn btn-success btn-xs btn-block">Edit</button>
+                  <button type="button" class="btn btn-info btn-xs btn-block">Lock</button>
+                </td>
+              </tr>
+              <tr>
+                <td>CTM</td>
+                <td>johnny</td>
+                <td>********</td>
+                <td>johnny@123.com</td>
+                <td>98765432</td>
+                <td>What is your company Name ?</td>
+                <td>FWD</td>
+                <td>Y</td>
+                <td>2017-12-12 12:36:12</td>
+                <td>
+                  <button type="button" class="btn btn-success btn-xs btn-block">Edit</button>
+                  <button type="button" class="btn btn-warning btn-xs btn-block">UnLock</button>
+                </td>
+              </tr>
+              <tr>
+                <td>CTM</td>
+                <td>johnny</td>
+                <td>********</td>
+                <td>johnny@123.com</td>
+                <td>98765432</td>
+                <td>What is your company Name ?</td>
+                <td>FWD</td>
+                <td>N</td>
+                <td>2017-12-12 12:36:12</td>
+                <td>
+                  <button type="button" class="btn btn-success btn-xs btn-block">Edit</button>
+                  <button type="button" class="btn btn-info btn-xs btn-block">Lock</button>
+                </td>
+              </tr>
+              <tr>
+                <td>CTM</td>
+                <td>johnny</td>
+                <td>********</td>
+                <td>johnny@123.com</td>
+                <td>98765432</td>
+                <td>What is your company Name ?</td>
+                <td>FWD</td>
+                <td>N</td>
+                <td>2017-12-12 12:36:12</td>
+                <td>
+                  <button type="button" class="btn btn-success btn-xs btn-block">Edit</button>
+                  <button type="button" class="btn btn-info btn-xs btn-block">Lock</button>
+                </td>
+              </tr>
+              <tr>
+                <td>CTM</td>
+                <td>johnny</td>
+                <td>********</td>
+                <td>johnny@123.com</td>
+                <td>98765432</td>
+                <td>What is your company Name ?</td>
+                <td>FWD</td>
+                <td>N</td>
+                <td>2017-12-12 12:36:12</td>
+                <td>
+                  <button type="button" class="btn btn-success btn-xs btn-block">Edit</button>
+                  <button type="button" class="btn btn-info btn-xs btn-block">Lock</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <nav aria-label="Page navigation">
+            <ul class="pagination pagination-sm">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New Account</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="loginType" class="col-sm-4 control-label">Login Type:</label>
+            <div class="col-sm-7">
+              <select class="form-control" id="loginType">
+                <option>Customer</option>
+                <option>Agency</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="userName" class="col-sm-4 control-label">UserName:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="userName" placeholder="UserName">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-sm-4 control-label">Password:</label>
+            <div class="col-sm-7">
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="passwordConfirm" class="col-sm-4 control-label">Password Confirm:</label>
+              <div class="col-sm-7">
+                <input type="password" class="form-control" id="passwordConfirm" placeholder="Password Confirm">
+              </div>
+            </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-4 control-label">Email:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mobileNo" class="col-sm-4 control-label">Mobile No:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="mobileNo" placeholder="Mobile No">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="passwordQuestion" class="col-sm-4 control-label">Password Question:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="passwordQuestion" placeholder="Password Question">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="passwordAnswer" class="col-sm-4 control-label">Password Answer:</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="passwordAnswer" placeholder="Password Answer">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

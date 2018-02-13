@@ -2,11 +2,12 @@
   "name": "react-accm",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://www.weather.com.cn/",
+  "proxy": "http://139.219.195.82/",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^3.2.0",
