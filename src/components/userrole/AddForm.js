@@ -6,8 +6,8 @@ class AddForm extends Component {
       <form className="form-inline">
         <div className="row">
           <div className="col-md-5">
-            <label htmlFor="systemCode">System Code:</label>
-            <input type="text" className="form-control" id="systemCode" placeholder="System Code" />
+            <label htmlFor="systemCode">User Role:</label>
+            <input type="text" className="form-control" id="userRole" placeholder="User Role" />
           </div>
           <div className="col-md-5">
             <label htmlFor="description">Description:</label>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Sidebar from '../components/layout/Sidebar';
-import ListTable from '../components/session/ListTable';
-import AddModel from '../components/session/AddModel'
+import ListTable from '../components/logintype/ListTable';
+import AddForm from '../components/logintype/AddForm';
 
-class Session extends Component {
+
+class LoginType extends Component {
   render() {
     return (
       <div>
@@ -13,12 +14,9 @@ class Session extends Component {
           <div className="row">
             <Sidebar />
             <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-              <div className="row">
-                <div className="col-md-10">
-                  <h2 className="sub-header">Session Token</h2>
-                </div>
-                <AddModel />
-              </div>
+              <h2 className="sub-header">Login Type</h2>
+              <AddForm />
+              <br />
               <ListTable />
             </div>
           </div>
@@ -28,4 +26,4 @@ class Session extends Component {
   }
 }
 
-export default Session;
+export default LoginType;
