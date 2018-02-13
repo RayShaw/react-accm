@@ -10,18 +10,32 @@ import Account from './Account';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/accm.css';
 
+function requireAuth(nextState, replace) {
+  if (false) {
+    replace('/login');
+  }
+}
+
+function isLogin(nextState, replace) {
+  if (false) {
+    replace('/system');
+  }
+}
+
+
 export default class App extends Component {
+
   render() {
     return (
       <Provider store={this.props.store}>
         <Router history={browserHistory}>
-          <Route path='/' component={System} />
-          <Route path='/system' component={System} />
-          <Route path='/login' component={Login} />
-          <Route path='/session' component={Session} />
-          <Route path='/logintype' component={LoginType} />
-          <Route path='/userrole' component={UserRole} />
-          <Route path='/account' component={Account} />
+          <Route onEnter={requireAuth} path='/' component={System} />
+          <Route onEnter={isLogin} path='/login' component={Login} />
+          <Route onEnter={requireAuth} path='/system' component={System} />
+          <Route onEnter={requireAuth} path='/session' component={Session} />
+          <Route onEnter={requireAuth} path='/logintype' component={LoginType} />
+          <Route onEnter={requireAuth} path='/userrole' component={UserRole} />
+          <Route onEnter={requireAuth} path='/account' component={Account} />
         </Router>
       </Provider>
     );
