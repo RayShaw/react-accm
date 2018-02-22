@@ -1,4 +1,4 @@
-import { SIGNIN_SUCCESS } from '../actions/login';
+import { FETCH_STARTED, SIGNIN_SUCCESS, FETCH_FAILURE } from '../actions/actionTypes';
 import { assign } from 'lodash';
 
 const initialState = {
@@ -8,11 +8,17 @@ const initialState = {
 
 export function login(state = initialState, action) {
   switch (action.type) {
+    case FETCH_STARTED: {
+      return { status: 'LOADING' };
+    }
     case SIGNIN_SUCCESS:
       return assign({}, state, {
-        data: action.payload,
+        data: action.result,
         success: true
       });
+    case FETCH_FAILURE: {
+      return { status: 'FAILURE' };
+    }
     default:
       return state;
   }

@@ -11,7 +11,7 @@ export default class LoginForm extends Component {
       userName: userName,
       password: password
     }
-    console.log(formData);
+    // console.log(formData);
     this.props.loginSubmit(formData);
   }
 

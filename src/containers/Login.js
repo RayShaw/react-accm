@@ -2,34 +2,36 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { browserHistory } from 'react-router';
 import LoginForm from '../components/login/LoginForm';
+import Tips from '../components/Tips';
 import { bindActionCreators } from 'redux';
 import { assign } from 'lodash';
 import * as LoginActions from '../actions/login';
 import '../css/login.css';
 
 class Login extends Component {
+  
   componentDidMount() {
-    // const cityCode = 101010100;
-    // const apiUrl = `/data/cityinfo/${cityCode}.html`;
-    // fetch(apiUrl).then((response) => {
-    //   console.log(apiUrl);
-    //   if (response.status !== 200) {
-    //     throw new Error('Fail to get response with status ' + response.status);
-    //   }
+   /*  const cityCode = 101010100;
+    const apiUrl = `/data/cityinfo/${cityCode}.html`;
+    fetch(apiUrl).then((response) => {
+      console.log(apiUrl);
+      if (response.status !== 200) {
+        throw new Error('Fail to get response with status ' + response.status);
+      }
 
-    //   response.json().then((responseJson) => {
-    //     console.log(responseJson.weatherinfo);
-    //     this.setState({ weather: responseJson.weatherinfo });
-    //   }).catch((error) => {
-    //     console.log(error);
-    //     this.setState({ weather: null });
-    //   });
-    // }).catch((error) => {
-    //   console.log(error);
-    //   this.setState({ weather: null });
-    // });
+      response.json().then((responseJson) => {
+        console.log(responseJson.weatherinfo);
+        this.setState({ weather: responseJson.weatherinfo });
+      }).catch((error) => {
+        console.log(error);
+        this.setState({ weather: null });
+      });
+    }).catch((error) => {
+      console.log(error);
+      this.setState({ weather: null });
+    }); */
 
-    const apiUrl = 'http://localhost:8080/ACCMAdminWeb/member/login';
+    /* const apiUrl = 'http://localhost:8080/ACCMAdminWeb/member/login';
 
     let formData = new FormData();
     formData.append("password", "Super@1234");
@@ -63,38 +65,14 @@ class Login extends Component {
       // }
     }).catch((error) => {
       console.log(error);
-    });
+    }); */
 
-    //   response.json().then((responseJson) => {
-    //     console.log(responseJson.weatherinfo);
-    //     this.setState({ weather: responseJson.weatherinfo });
-    //   }).catch((error) => {
-    //     console.log(error);
-    //     this.setState({ weather: null });
-    //   });
-    // }).catch((error) => {
-    //   console.log(error);
-    //   this.setState({ weather: null });
-    // });
-
-
-    // let formData = new FormData();
-    // formData.append("password", "Super@1234");
-    // formData.append("userName", "superAdmin");
-    // fetch("/ACCMAdminWS/member/login", {
-    //   method: "POST",
-    //   body: formData
-    // }).then((response) => {
-    //   console.log(response);
-    // }).catch((error) => {
-    //   console.log('error:', error);
-    // });
   }
 
   componentWillReceiveProps(nextProps) {
-    const { success, data } = nextProps;
-    console.log(success);
-    console.log(data);
+    const { success } = nextProps;
+    console.log('success:', success);
+    // console.log(data);
 
     if (success) {
       browserHistory.push('/system');
@@ -107,6 +85,10 @@ class Login extends Component {
       <div className="container">
         <h2 className="text-center">Account Management System</h2>
         <LoginForm loginSubmit={actions.loginSubmit} />
+        <Tips 
+          show={true}
+          message="Error password"
+        />
       </div>
     );
   }
