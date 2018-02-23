@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Alert, Button } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
+import { dismissTips } from '../actions/tips';
+import { connect } from 'react-redux';
 
 class Tips extends Component {
   constructor(props, context) {
@@ -14,7 +16,8 @@ class Tips extends Component {
   }
 
   handleDismiss() {
-    this.setState({ show: false });
+    // this.setState({ show: false });
+    this.props.dispatch(dismissTips());
   }
 
   handleShow() {
@@ -22,7 +25,7 @@ class Tips extends Component {
   }
 
   render() {
-    if (this.state.show) {
+    if (this.props.show) {
       return (
         <Alert className="alert-tips" bsStyle="danger" onDismiss={this.handleDismiss}>
           {/* <h4>Oh snap! You got an error!</h4> */}
@@ -31,8 +34,17 @@ class Tips extends Component {
       );
     }
 
-    return <Button onClick={this.handleShow}>Show Alert</Button>;
+    return null;
   }
 }
 
-export default Tips;
+
+function mapStateToProps(state) {
+  return {
+    show: state.tips.show,
+    message: state.tips.message
+  }
+}
+
+
+export default connect(mapStateToProps)(Tips);

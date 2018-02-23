@@ -1,4 +1,4 @@
-exports.Session = (() => {
+exports.SessionStorage = (() => {
 
   return {
     'set': (key, value) => {

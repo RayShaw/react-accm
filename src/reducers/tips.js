@@ -2,7 +2,7 @@ import { assign } from 'lodash';
 import { SHOW_TIPS, DISMISS_TIPS } from '../actions/actionTypes';
 
 const initialState = {
-  message: '',
+  message: 'Login error.',
   show: false
 }
 

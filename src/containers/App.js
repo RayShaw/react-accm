@@ -7,17 +7,18 @@ import Session from './Session';
 import LoginType from './LoginType';
 import UserRole from './UserRole';
 import Account from './Account';
+import { SessionStorage } from '../utils/session';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/accm.css';
 
 function requireAuth(nextState, replace) {
-  if (false) {
+  if (!SessionStorage.get('token')) {
     replace('/login');
   }
 }
 
 function isLogin(nextState, replace) {
-  if (false) {
+  if (SessionStorage.get('token')) {
     replace('/system');
   }
 }

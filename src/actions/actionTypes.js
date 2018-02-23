@@ -3,7 +3,9 @@ export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAILURE = 'FETCH_FAILURE';
 
 // login
-export const SIGNIN_SUCCESS = 'SIGNIN_SUCCESS';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGOUT = 'LOGOUT';
+
 
 // tips
 export const SHOW_TIPS = 'SHOW_TIPS';
